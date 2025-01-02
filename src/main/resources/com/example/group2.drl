@@ -1,0 +1,25 @@
+package com.example
+
+unit Group2
+
+import com.example.facts.IntegerFact;
+import com.example.facts.StringFact;
+
+rule "Insert Group 2 Fact"
+when
+  	$s: /facts[ myT == 2 ]
+then
+	facts.addLogical(new StringFact("Group 2 Fired."));
+end
+
+rule "Insert Group 2 Fact - take 2"
+when
+    $s: /facts[ myT == "Group 2 Fired." ]
+then
+	facts.add(new IntegerFact(3));
+	facts.add(new StringFact("Group 2 Second Rule Fired."));
+end
+
+query facts2
+  $s : /facts
+end

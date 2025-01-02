@@ -1,0 +1,16 @@
+package com.example
+
+unit Group1
+
+import com.example.facts.StringFact;
+
+rule "Insert Group 1 Fact"
+when
+  	$s: /facts[ myT == "1" ]
+then
+	facts.add(new StringFact("Group 1 Fired."));
+end
+
+query facts1
+  $s : /facts
+end

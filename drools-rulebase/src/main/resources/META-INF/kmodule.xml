@@ -1,4 +1,0 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule">
-  <kbase name="GROUP_1" packages="com.example.group1"/>
-  <kbase name="GROUP_2" packages="com.example.group2"/>
-</kmodule>
