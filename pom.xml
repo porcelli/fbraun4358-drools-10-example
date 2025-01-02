@@ -66,8 +66,8 @@
       <artifactId>drools-tms</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.drools</groupId>
-      <artifactId>drools-quarkus-rules</artifactId>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-with-drools-quarkus</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>

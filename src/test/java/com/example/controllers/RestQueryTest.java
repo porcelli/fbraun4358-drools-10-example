@@ -33,6 +33,32 @@ import static org.hamcrest.Matchers.hasItem;
 public class RestQueryTest {
 
     @Test
+    public void testGroup1Process() {
+        given()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body("{\"fact\":{\"myT\":\"1\"}}")
+                .when()
+                .post("/group1")
+                .then()
+                .statusCode(201)
+                .log().all();
+    }
+
+    @Test
+    public void testGroup2Process() {
+        given()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body("{\"fact\":{\"myT\":2}}")
+                .when()
+                .post("/group2")
+                .then()
+                .statusCode(201)
+                .log().all();
+    }
+
+    @Test
     public void testGroup1Endpoint() {
         given()
                 .accept(ContentType.JSON)
@@ -44,6 +70,7 @@ public class RestQueryTest {
                 .statusCode(200)
                 .log().all();
     }
+
 
     @Test
     public void testGroup2Endpoint() {

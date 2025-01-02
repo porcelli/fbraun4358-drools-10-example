@@ -7,7 +7,7 @@ import org.drools.ruleunits.api.DataStore;
 import org.drools.ruleunits.api.RuleUnitData;
 
 public class Group2 implements RuleUnitData {
-    DataStore<MyFact> facts = DataSource.createStore();
+    private DataStore<MyFact> facts = DataSource.createStore();
 
     public DataStore<MyFact> getFacts() {
         return facts;
